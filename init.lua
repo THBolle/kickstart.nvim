@@ -71,7 +71,8 @@ require('lazy').setup({
   -- require 'custom/plugins/debug',
   -- require 'custom/plugins/indent_line',
   -- require 'custom/plugins/lint',
-  -- require 'custom/plugins/autopairs',
+  require 'custom/plugins/autopairs',
+  require 'custom/plugins/noice',
 
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
