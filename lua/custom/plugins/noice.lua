@@ -18,30 +18,30 @@ return {
       presets = {
         -- bottom_search = true, -- use a classic bottom cmdline for search
         -- position the cmdline and popupmenu together
-        command_palette = {
-          views = {
-            cmdline_popup = {
-              position = {
-                row = '50%',
-                col = '50%',
-              },
-              -- size = {
-              --   min_width = 60,
-              --   width = 'auto',
-              --   height = 'auto',
-              -- },
-            },
-            -- uncomment lines below if not used nvim-cmp as backend
-            cmdline_popupmenu = {
-              position = 'auto',
-              -- position = {
-              -- row = 'auto',
-              -- col = '50%',
-              -- },
-              -- size = 'auto',
-            },
-          },
-        },
+        -- command_palette = {
+        --   views = {
+        --     cmdline_popup = {
+        --       position = {
+        --         row = '50%',
+        --         col = '50%',
+        --       },
+        --       -- size = {
+        --       --   min_width = 60,
+        --       --   width = 'auto',
+        --       --   height = 'auto',
+        --       -- },
+        --     },
+        --     -- uncomment lines below if not used nvim-cmp as backend
+        --     cmdline_popupmenu = {
+        --       position = 'auto',
+        --       -- position = {
+        --       -- row = 'auto',
+        --       -- col = '50%',
+        --       -- },
+        --       -- size = 'auto',
+        --     },
+        --   },
+        -- },
         -- command_palette = true,
         long_message_to_split = true, -- long messages will be sent to a split
         inc_rename = false, -- enables an input dialog for inc-rename.nvim

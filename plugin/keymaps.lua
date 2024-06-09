@@ -18,7 +18,7 @@ set('n', '<M-t>', '<C-w>+')
 set('n', '<M-s>', '<C-w>-')
 
 -- Execute the current file
-set('n', '<leader><leader>x', '<cmd>source %<CR>', { desc = 'Execute the current file' })
+-- set('n', '<leader><leader>x', '<cmd>source %<CR>', { desc = 'Execute the current file' })
 
 -- Clear highlight on search when pressing <ESC> in normal mode
 set('n', '<Esc>', '<cmd>nohlsearch<CR>')

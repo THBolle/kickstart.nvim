@@ -57,7 +57,6 @@ require('lazy').setup({
   { 'numToStr/Comment.nvim', opts = {} },
 
   require 'custom/colorschemes/tokyonight',
-
   require 'custom/plugins/gitsigns',
   require 'custom/plugins/which-key',
   require 'custom/plugins/telescope',

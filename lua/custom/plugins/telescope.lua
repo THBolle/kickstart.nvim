@@ -60,6 +60,25 @@ return {
             require('telescope.themes').get_dropdown(),
           },
         },
+        defaults = {
+          layout_strategy = 'flex',
+          layout_config = {
+            flex = {
+              flip_columns = 150,
+            },
+            vertical = {
+              -- prompt_position = 'bottom',
+              mirror = true,
+            },
+            horizontal = {},
+          },
+          mappings = {
+            ['i'] = {
+              ['<M-k>'] = 'preview_scrolling_up',
+              ['<M-j>'] = 'preview_scrolling_down',
+            },
+          },
+        },
       }
 
       -- Enable Telescope extensions if they are installed
