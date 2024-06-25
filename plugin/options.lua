@@ -15,7 +15,7 @@ opt.relativenumber = true
 opt.mouse = 'a'
 
 -- Show the mode at the bottom
-opt.showmode = true
+opt.showmode = false
 
 -- Sync clipboard between OS and Neovim.
 --  See `:help 'clipboard'`

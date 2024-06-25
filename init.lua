@@ -56,8 +56,13 @@ require('lazy').setup({
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
-  require 'custom/colorschemes/tokyonight',
-  require 'custom/plugins/gitsigns',
+  -- Colorschemes
+  -- require 'custom/colorschemes/tokyonight',
+  -- require 'custom/colorschemes/catppuccin',
+  require 'custom/colorschemes/kanagawa',
+
+  -- Plugins
+  -- require 'custom/plugins/gitsigns',
   require 'custom/plugins/which-key',
   require 'custom/plugins/telescope',
   require 'custom/plugins/lspconfig',
@@ -69,9 +74,11 @@ require('lazy').setup({
   require 'custom/plugins/neo-tree',
   -- require 'custom/plugins/debug',
   -- require 'custom/plugins/indent_line',
-  -- require 'custom/plugins/lint',
+  require 'custom/plugins/lint',
   require 'custom/plugins/autopairs',
   require 'custom/plugins/noice',
+  -- require 'custom/plugins/hardtime',
+  require 'custom/plugins/lualine',
 
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`

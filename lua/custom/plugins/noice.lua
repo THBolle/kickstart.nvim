@@ -16,43 +16,65 @@ return {
       },
       -- you can enable a preset for easier configuration
       presets = {
-        -- bottom_search = true, -- use a classic bottom cmdline for search
-        -- position the cmdline and popupmenu together
-        -- command_palette = {
-        --   views = {
-        --     cmdline_popup = {
-        --       position = {
-        --         row = '50%',
-        --         col = '50%',
-        --       },
-        --       -- size = {
-        --       --   min_width = 60,
-        --       --   width = 'auto',
-        --       --   height = 'auto',
-        --       -- },
-        --     },
-        --     -- uncomment lines below if not used nvim-cmp as backend
-        --     cmdline_popupmenu = {
-        --       position = 'auto',
-        --       -- position = {
-        --       -- row = 'auto',
-        --       -- col = '50%',
-        --       -- },
-        --       -- size = 'auto',
-        --     },
-        --   },
-        -- },
-        -- command_palette = true,
+        bottom_search = false, -- use a classic bottom cmdline for search
+        command_palette = false,
         long_message_to_split = true, -- long messages will be sent to a split
         inc_rename = false, -- enables an input dialog for inc-rename.nvim
         lsp_doc_border = true, -- add a border to hover docs and signature help
       },
+      views = {
+        cmdline_popup = {
+          border = {
+            -- style = 'rounded',
+            text = {
+              top = ' Command ',
+            },
+          },
+          position = {
+            row = math.floor((vim.o.lines / 2)),
+            col = '50%',
+          },
+          filter_options = {},
+          win_options = {
+            -- winhighlight = { Normal = 'Normal', FloatBorder = 'Normal' },
+          },
+          size = {
+            width = 60,
+            height = 1,
+          },
+        },
+        popupmenu = {
+          relative = 'editor',
+          position = {
+            row = math.floor((vim.o.lines / 2) + 3),
+            col = '50%',
+          },
+          size = {
+            width = 60,
+            height = 10,
+          },
+          border = {
+            style = 'rounded',
+          },
+          win_options = {
+            winhighlight = { Normal = 'Normal', FloatBorder = 'Float' },
+          },
+        },
+      },
       cmdline = {
         view = 'cmdline_popup',
+        opts = {},
         format = {
+          -- conceal = false,
           cmdline = false,
-          -- help = false,
+          lua = { pattern = { '^:%s*lua%s+', '^:%s*lua%s*=%s*', '^:%s*=%s*' }, icon = '', lang = 'lua' },
+          -- input = {},
         },
+      },
+      message = {
+        enabled = true,
+        view_warn = 'notify',
+        view = 'notify',
       },
     },
     dependencies = {
