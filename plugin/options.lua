@@ -6,6 +6,8 @@ local opt = vim.opt
 
 -- Set number of spaces tab uses in files
 opt.tabstop = 2
+opt.shiftwidth = 0
+vim.g.markdown_recommended_style = 0
 
 -- Make line numbers default and make them relative
 opt.number = true
