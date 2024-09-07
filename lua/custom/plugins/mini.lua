@@ -14,8 +14,23 @@ return {
       --
       -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
       -- - sd'   - [S]urround [D]elete [']quotes
-      -- - sr)'  - [S]urround [R]eplace [)] [']
+      -- - sr)'  - [S]urround [R]epjace [)] [']
       require('mini.surround').setup()
+      -- unbind vim internaj 's' keybinding
+      vim.keymap.set('n', 's', '<nop>', { desc = 'surround' })
+      -- vim.keymap.set('n', 'sa', '', { desc = 'surround around' })
+
+      local wk = require 'which-key'
+      wk.add {
+        { 'sa', desc = '[S]urround [A]dd [X]' },
+        { 'sab', desc = '[S]urround [A]dd [B]ackwards [X]' },
+        { 'saw', desc = '[S]urround [A]dd [W]ord [X]' },
+        { 'sae', desc = '[S]urround [A]dd [E]nd [X]' },
+        { 'sai', desc = '[S]urround [A]dd [I]nner [X]' },
+        { 'saiw', desc = '[S]urround [A]dd [I]nner [W]ord [X]' },
+        { 'sd', desc = '[S]urround [D]elete [X]' },
+        { 'sr', group = '[S]urround [R]eplace [X] [Y]' },
+      }
 
       --  You could remove this setup call if you don't like it,
       --  and try some other statusline plugin
@@ -30,6 +45,14 @@ return {
       statusline.section_location = function()
         return '%2l:%-2v'
       end
+
+      local indentscope = require 'mini.indentscope'
+      indentscope.setup {
+        draw = {
+          delay = 0,
+        },
+      }
+      -- require(mini.indentscope).gen_animation.none()
 
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
