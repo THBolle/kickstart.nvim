@@ -46,14 +46,6 @@ return {
         return '%2l:%-2v'
       end
 
-      local indentscope = require 'mini.indentscope'
-      indentscope.setup {
-        draw = {
-          delay = 0,
-        },
-      }
-      -- require(mini.indentscope).gen_animation.none()
-
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,

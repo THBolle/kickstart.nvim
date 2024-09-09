@@ -65,19 +65,26 @@ require('lazy').setup({
   require 'custom/plugins/gitsigns',
   require 'custom/plugins/which-key',
   require 'custom/plugins/telescope',
-  require 'custom/plugins/lspconfig',
   require 'custom/plugins/conform',
   require 'custom/plugins/cmp',
   require 'custom/plugins/todo-comments',
   require 'custom/plugins/mini',
   require 'custom/plugins/treesitter',
   -- require 'custom/plugins/debug',
-  -- require 'custom/plugins/indent_line',
   require 'custom/plugins/lint',
   require 'custom/plugins/autopairs',
   require 'custom/plugins/noice',
   -- require 'custom/plugins/hardtime',
   require 'custom/plugins/lualine',
+
+  -- LSP servers, Typescript
+  require 'custom/plugins/lsp/lspconfig',
+  -- require 'custom/plugins/lsp/typescript-tools',
+
+  -- Appearance
+  require 'custom.plugins.appearance.ccc', -- Adds color picker
+  require 'custom.plugins.appearance.satellite', -- Adds scrollbar with information
+  require 'custom.plugins.appearance.indent_line', -- Add indentation guides even on blank lines
 
   -- Folds
   -- require 'custom/plugins/nvim-ufo',

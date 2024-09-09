@@ -64,3 +64,6 @@ opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 opt.scrolloff = 10
+
+-- Enable termguicolors needed for ccc.nvim (Create Color Code)
+opt.termguicolors = true
