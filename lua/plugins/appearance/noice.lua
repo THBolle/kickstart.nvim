@@ -14,6 +14,7 @@ return {
           enabled = false,
         },
       },
+
       -- you can enable a preset for easier configuration
       presets = {
         bottom_search = false, -- use a classic bottom cmdline for search
@@ -22,6 +23,7 @@ return {
         inc_rename = false, -- enables an input dialog for inc-rename.nvim
         lsp_doc_border = true, -- add a border to hover docs and signature help
       },
+
       views = {
         cmdline_popup = {
           border = {
@@ -61,6 +63,7 @@ return {
           },
         },
       },
+
       cmdline = {
         view = 'cmdline_popup',
         opts = {},
@@ -71,12 +74,14 @@ return {
           -- input = {},
         },
       },
+
       message = {
         enabled = true,
         view_warn = 'notify',
         view = 'notify',
       },
     },
+
     dependencies = {
       -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
       'MunifTanjim/nui.nvim',

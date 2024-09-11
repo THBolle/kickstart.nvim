@@ -7,7 +7,7 @@ return {
       triggers = {
         { '<auto>', mode = 'nixsotc' },
         -- { '<leader>', mode = { 'n', 'v' } },
-        { 's', mode = { 'n' } },
+        { 's', mode = { 'n', 'v' } },
       },
       icons = {
         mappings = vim.g.have_nerd_font,

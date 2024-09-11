@@ -16,6 +16,8 @@ return {
           show_end = true,
         },
         indent = {
+          char = { '│' },
+          tab_char = { '│' },
           -- char = { '│', '┊' },
           -- tab_char = { '│', '┊' },
         },

@@ -2,7 +2,7 @@
 return {
   'uga-rosa/ccc.nvim',
   keys = {
-    { '#', vim.cmd.CccPick, desc = ' Color Picker' },
+    { '<leader>#', vim.cmd.CccPick, desc = ' Color Picker' },
   },
   ft = { 'css', 'zhs', 'lua', 'toml' },
   config = function(spec)
@@ -36,7 +36,7 @@ return {
         ccc.picker.hex_long, -- Only long hex to not pick issue numbers like #123
         ccc.picker.css_rgb,
         ccc.picker.css_hsl,
-        -- ccc.picker.css_name,
+        -- ccc.picker.css_name, -- Color strings like 'blue', 'red', etc.
         ccc.picker.defaults,
       },
 

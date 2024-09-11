@@ -56,42 +56,42 @@ require('lazy').setup({
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
-  -- Colorschemes
-  -- require 'custom/colorschemes/tokyonight',
-  -- require 'custom/colorschemes/catppuccin',
-  require 'custom/colorschemes/kanagawa',
+  ------------------ Utility ------------------
+  require 'plugins.utility.mini', -- Multiple independent 'mini' lua modules
+  require 'plugins.utility.gitsigns', -- Git integration
+  require 'plugins.utility.which-key', -- Popup showing keybindings
+  require 'plugins.utility.telescope', -- Fuzzy finder
+  require 'plugins.utility.cmp', -- Autocompletion
+  require 'plugins.utility.treesitter', -- Highlight, edit, and navigate code
+  require 'plugins.utility.autopairs', -- Autopairing ofc
+  require 'plugins.utility.ccc', -- Adds color picker
+  -- require 'plugins.utility.hardtime',
+  -- require 'plugins.utility.nvim-ufo', -- Folds
 
-  -- Plugins
-  require 'custom/plugins/gitsigns',
-  require 'custom/plugins/which-key',
-  require 'custom/plugins/telescope',
-  require 'custom/plugins/conform',
-  require 'custom/plugins/cmp',
-  require 'custom/plugins/todo-comments',
-  require 'custom/plugins/mini',
-  require 'custom/plugins/treesitter',
-  -- require 'custom/plugins/debug',
-  require 'custom/plugins/lint',
-  require 'custom/plugins/autopairs',
-  require 'custom/plugins/noice',
-  -- require 'custom/plugins/hardtime',
-  require 'custom/plugins/lualine',
+  ------------------ Utility ------------------
+  -- File structure, both of these are not needed at the same time
+  require 'plugins.utility.file-structure.oil',
+  require 'plugins.utility.file-structure.neo-tree',
 
-  -- LSP servers, Typescript
-  require 'custom/plugins/lsp/lspconfig',
-  -- require 'custom/plugins/lsp/typescript-tools',
+  ------------------ Tooling ------------------
+  -- LSP servers, DAP servers, linters, and formatters with Mason interface
+  require 'plugins.tooling.lspconfig', -- LSP
+  -- require 'plugins.tooling.typescript-tools', -- LSP
+  -- require 'plugins.tooling.debug', -- DAP
+  require 'plugins.tooling.lint', -- Linter
+  require 'plugins.tooling.conform', -- Formatting
 
-  -- Appearance
-  require 'custom.plugins.appearance.ccc', -- Adds color picker
-  require 'custom.plugins.appearance.satellite', -- Adds scrollbar with information
-  require 'custom.plugins.appearance.indent_line', -- Add indentation guides even on blank lines
+  ----------------- Appearance ------------------
+  require 'plugins.appearance.noice', -- Chages the UI for messages, cmdline and the popupmenu. Also adds notifications
+  require 'plugins.appearance.todo-comments',
+  require 'plugins.appearance.lualine', -- Configures bottom statusline
+  require 'plugins.appearance.satellite', -- Adds scrollbar with information
+  require 'plugins.appearance.indent_line', -- Add indentation guides even on blank lines
 
-  -- Folds
-  -- require 'custom/plugins/nvim-ufo',
-
-  -- File structure, both of these are not needed
-  require 'custom/plugins/oil',
-  require 'custom/plugins/neo-tree',
+  ---------------- Colorscheme ------------------
+  require 'colorschemes.kanagawa',
+  -- require 'colorschemes/tokyonight',
+  -- require 'colorschemes/catppuccin',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
