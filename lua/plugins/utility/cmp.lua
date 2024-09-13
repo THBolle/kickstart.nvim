@@ -34,8 +34,10 @@ return {
       --  into multiple repos for maintenance purposes.
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
+      'mlaursen/vim-react-snippets',
     },
     config = function()
+      require('vim-react-snippets').lazy_load() -- Adds react snippets
       -- See `:help cmp`
       local cmp = require 'cmp'
       local luasnip = require 'luasnip'
